@@ -92,3 +92,31 @@ for emps in emp:
 print(emps)
 
 mydb.commit()
+
+pandas program
+1
+import pandas as pd
+uber_data=pd.read_csv("Uber.csv")
+uber_data.head()
+#loading from excel file
+#uber_data=
+#print(uber_data.shape)
+#print(uber_data.info())
+#print(uber_data.describe())
+print(uber_data.isnull().sum())
+uber_data.head()
+uber_data.tail()
+uber_data.iloc[0]
+uber_data.iloc[2:8]
+uber_data.iloc[2:8,1:3]
+uber_data.iloc[20:41,1:4]
+
+2 
+import pandas as pd
+df=pd.read_csv(
+"Uber.csv",
+sep=",",
+dtype={"START":int},
+skiprows=1,
+nrows=5,na_values=["NA","Unknown"])
+print(df)
